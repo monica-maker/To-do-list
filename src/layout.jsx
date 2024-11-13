@@ -1,9 +1,9 @@
-import "/src/components/layout.css"
+import "/src/components/layout.css";
 
-export default function Layout(){
-    return(
-        <>
-        <h1>it is working</h1>
-        </>
-    )
+export default function Layout() {
+  return (
+    <>
+      <h1>To-to list</h1>
+    </>
+  );
 }
