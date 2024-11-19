@@ -30,45 +30,6 @@ body {
   justify-content: center;
 }
 /*Positioning and designing the ToDo and complete buttons*/
-.top {
-  display: flex;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  justify-content: space-between;
-}
-
-#borderless {
-  border: none;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  position: relative;
-  font-family: monospace;
-  text-decoration: none;
-  background-color: transparent;
-}
-
-#borderless:after {
-  content: "";
-  width: 100%;
-  height: 1.5px;
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: #072ac8;
-  transform: scaleX(1);
-  transition: transform 0.3s ease-in-out;
-}
-
-#borderless.active:after,
-#borderless:hover:after {
-  transform: scaleX(1);
-  background-color: #ffffff;
-}
-
-/*
-oppstion of hovering on top of the buttons.
 .top{
  display: flex;
  margin-left: 2rem;
@@ -98,4 +59,4 @@ oppstion of hovering on top of the buttons.
 }
 #borderless:hover:after{
   transform: scaleX(1);
-} */
+} 
