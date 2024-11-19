@@ -33,31 +33,34 @@ export default function App() {
 
   const todoTasks = tasks.filter((task) => !task.completed);
   const completedTasks = tasks.filter((task) => task.completed);
-
+  
   return (
     <>
-      <div>
-        <h1>Todo list app</h1>
-        <button onClick={() => setActiveTab("todo")}>Todo</button>
-        <button onClick={() => setActiveTab("completed")}>
-          Completed Task
-        </button>
-      </div>
+      <div className="home">
+          
+          <h1>Todo list app</h1>
+            <div className="top">
+              <button id="borderless" onClick={() => setActiveTab("todo")}>Todo Tasks</button>
+              <button id="borderless" onClick={() => setActiveTab("completed")}>
+                Completed Task
+              </button>
+            </div>
 
-      {activeTab === "todo" ? (
-        <ToDoTab
-          onToggleTask={toggleTask}
-          onDeleteTask={deleteTask}
-          onAddTask={addTask}
-          tasks={todoTasks}
-        />
-      ) : (
-        <CompletedTab
-          onDeleteTask={deleteTask}
-          onToggleTask={toggleTask}
-          tasks={completedTasks}
-        />
-      )}
+        {activeTab === "todo" ? (
+          <ToDoTab
+            onToggleTask={toggleTask}
+            onDeleteTask={deleteTask}
+            onAddTask={addTask}
+            tasks={todoTasks}
+          />
+        ) : (
+          <CompletedTab
+            onDeleteTask={deleteTask}
+            onToggleTask={toggleTask}
+            tasks={completedTasks}
+          />
+        )}
+      </div>
     </>
   );
 }

@@ -3,7 +3,7 @@ import TaskItem from "./TaskItem";
 export default function CompletedTab({ tasks, onToggleTask, onDeleteTask }) {
   return (
     <>
-      <div>
+      <div className="completedTask">
         {tasks.map((task) => (
           <TaskItem
             key={task.id}
